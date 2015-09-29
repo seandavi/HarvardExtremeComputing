@@ -1,0 +1,78 @@
+---
+title: "DataPreparation.Rmd"
+author: "Sean Davis"
+date: "9/28/2015"
+output: html_document
+---
+
+```{r}
+require(RTCGA)
+require(readr)
+```
+
+```{r}
+date <- tail( checkTCGA('Dates'), 1 )
+```
+
+### Clinical data
+
+```{r}
+downloadTCGA( cancerTypes = "GBM", destDir = "data/", date = date )
+```
+
+```{r}
+list.files("data/") %>%
+    grep("Clinical", x = ., value = TRUE) %>%
+    paste0("data/", .) -> folder
+
+folder %>%
+    list.files() %>%
+    grep("clin.merged", x = ., value=TRUE) %>%
+    paste0(folder, "/", .) %>%
+    readTCGA(path = ., "clinical") -> GBM.clinical
+```
+
+### Gene Expression data
+
+```{r}
+downloadTCGA( cancerTypes = "GBM", destDir = "data/", date = date, 
+              dataSet = "Merge_transcriptome__agilentg4502a_07_1__unc_edu__Level_3__unc_lowess_normalization_gene_level__data.Level_3" )
+```
+
+```{r}
+list.files("data/") %>%
+    grep("rnaseq", x = ., value = TRUE) %>%
+    paste0("data/", .) -> folder
+
+folder %>%
+    list.files() %>%
+    grep("illumina", x = ., value=TRUE) %>%
+    paste0(folder, "/", .) %>%
+    readTCGA(path = ., "rnaseq") -> GBM.rnaseq
+```
+
+### Methylation data
+
+```{r}
+downloadTCGA( cancerTypes = "GBM", destDir = "data/", date = date, 
+              dataSet = "Merge_methylation__humanmethylation27__jhu_usc_edu__Level_3__within_bioassay_data_set_function__data.Level" )
+```
+
+```{r}
+list.files("data/") %>%
+    grep("methylation", x = ., value = TRUE) %>%
+    paste0("data/", .) -> folder
+
+folder %>%
+    list.files() %>%
+    grep("methulation", x = ., value=TRUE) %>%
+    paste0(folder, "/", .) %>%
+    readTCGA(path = ., "methylation") -> BRCA.rnaseq
+```
+
+### Copy Number data
+
+```{r}
+downloadTCGA( cancerTypes = "GBM", destDir = "data/", date = date, 
+            dataSet = "Merge_snp__genome_wide_snp_6__broad_mit_edu__Level_3__segmented_scna_minus_germline_cnv_hg18__seg.Level" )
+```
