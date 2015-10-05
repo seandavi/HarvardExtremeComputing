@@ -1,0 +1,71 @@
+---
+title: "PrepareData.Rmd"
+author: "Sean Davis"
+date: "9/28/2015"
+output: html_document
+---
+
+## Required packages
+
+- RTCGA
+- readr
+- SummarizedExperiment
+
+```{r}
+library(RTCGA)
+```
+
+```{r}
+dir.create("data")
+```
+
+```{r}
+date <- tail( checkTCGA('Dates'), 1 )
+```
+
+```{r}
+if(!file.exists('data/gdac.broadinstitute.org_GBM.Merge_Clinical.Level_1.2015082100.0.0/GBM.merged_only_clinical_clin_format.txt')) {
+downloadTCGA( cancerTypes = "GBM", destDir = "data/", date = date )
+}
+```
+
+```{r}
+if(!file.exists('data/gdac.broadinstitute.org_GBM.Merge_rnaseqv2__illuminahiseq_rnaseqv2__unc_edu__Level_3__RSEM_genes_normalized__data.Level_3.2015082100.0.0/GBM.rnaseqv2__illuminahiseq_rnaseqv2__unc_edu__Level_3__RSEM_genes_normalized__data.data.txt')) {
+downloadTCGA( cancerTypes = "GBM", 
+              destDir = "data/", 
+              date = date, 
+              dataSet = "rnaseqv2__illuminahiseq_rnaseqv2__unc_edu__Level_3__RSEM_genes_normalized__data.Level" ) 
+}
+```
+
+### Gene Expression data
+
+
+
+```{r}
+if(!file.exists('data/')) 
+downloadTCGA( cancerTypes = "GBM", 
+              destDir = "data/", 
+              date = date, 
+              dataSet = "rnaseqv2__illuminahiseq_rnaseqv2__unc_edu__Level_3__RSEM_genes_normalized__data.Level" ) 
+```
+
+### Copy Number data
+
+```{r}
+if(!file.exists('data/gdac.broadinstitute.org_GBM-TP.CopyNumber_Gistic2.Level_4.2015040200.0.0/all_data_by_genes.txt')) {
+  download.file('http://gdac.broadinstitute.org/runs/analyses__2015_04_02/data/GBM-TP/20150402/gdac.broadinstitute.org_GBM-TP.CopyNumber_Gistic2.Level_4.2015040200.0.0.tar.gz', destfile="data/gdac.broadinstitute.org_GBM-TP.CopyNumber_Gistic2.Level_4.2015040200.0.0.tar.gz")
+  untar('data/gdac.broadinstitute.org_GBM-TP.CopyNumber_Gistic2.Level_4.2015040200.0.0.tar.gz')
+}
+```
+
+### Methyldation data
+
+```{r}
+if(!file.exists('data/gdac.broadinstitute.org_GBM.Merge_methylation__humanmethylation27__jhu_usc_edu__Level_3__within_bioassay_data_set_function__data.Level_3.2015082100.0.0/GBM.methylation__humanmethylation27__jhu_usc_edu__Level_3__within_bioassay_data_set_function__data.data.txt')) {
+downloadTCGA( cancerTypes = "GBM",
+              destDir = "data/", 
+              date = date, 
+              dataSet = "Merge_methylation__humanmethylation450__jhu_usc_edu__Level_3__within_bioassay_data_set_function__data.Level")
+}
+```
