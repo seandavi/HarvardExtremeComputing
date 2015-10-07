@@ -73,6 +73,9 @@ students
 
 ### Biology
 
+- Genetics and gene regulation
+    - [GEUVADIS paper](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3918453/)
+
 - Public resources
     - [The Cancer Genome Atlas (TCGA) project](http://cancergenome.nih.gov/)
     - [The National Center for Biomedical Informatics](http://www.ncbi.nlm.nih.gov/)
