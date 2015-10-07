@@ -1,10 +1,6 @@
----
-title: "Course Overview"
-author: "Sean Davis and Eric Stahlberg"
-output: 
-  html_document:
-    include_toc: true
----
+# HarvardExtremeComputing
+
+Materials for the Fall 2015 Harvard Extreme Computing course.
 
 ## Lecture 1
 
