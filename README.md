@@ -9,7 +9,7 @@ core concepts of normal biology and also to introduce
 students to technologies that allow researchers to probe
 the genome to better understand normal and human biology.
 
-[Slides](http://watson.nci.nih.gov/~sdavis/courses/HarvardExtremeComputing/BasicBio.pdf)
+[Slides will be here soon]
 
 ## Lab 1
 
