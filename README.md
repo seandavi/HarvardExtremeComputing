@@ -69,7 +69,9 @@ show example data output from applying this approach to our TCGA GBM data.
 In this lab, we will be setting up and running the large-scale RF-ACE analysis. At this point,
 students 
 
-### Background materials
+## Background materials
+
+### Biology
 
 - Public resources
     - [The Cancer Genome Atlas (TCGA) project](http://cancergenome.nih.gov/)
@@ -79,7 +81,6 @@ students
     - [The UCSC Genome Browser](http://genome.ucsc.edu)
     - [BioStars](https://biostars.org)
     - [Bioconductor](http://bioconductor.org)
-    
 - Genomic assays
     - [DNA microarrays]()
     - [Illumina sequencing overview (pdf)](https://www.illumina.com/documents/products/techspotlights/techspotlight_sequencing.pdf)
@@ -90,3 +91,7 @@ students
     - [Comprehensive genomic characterization defines human glioblastoma genes and core pathways](http://www.nature.com/nature/journal/v455/n7216/full/nature07385.html)
     - [Gene expression profiling predicts clinical outcome of breast cancer](http://www.nature.com/nature/journal/v415/n6871/full/415530a.html)
     - [Genome-scale hypothesis scanning](http://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.0000015)
+
+### Computation and machine learning
+
+- [CloudForest](https://github.com/ryanbressler/CloudForest)
