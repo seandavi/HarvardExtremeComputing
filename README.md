@@ -83,7 +83,8 @@ students
 - Genomic assays
     - [DNA microarrays]()
     - [Illumina sequencing overview (pdf)](https://www.illumina.com/documents/products/techspotlights/techspotlight_sequencing.pdf)
-- Classic papers
+- Manuscripts of interest and classic papers
+    - [The cancer genome](http://www.nature.com/nature/journal/v458/n7239/full/nature07943.html)
     - [Molecular Classification of Cancer: Class Discovery and Class Prediction by Gene Expression Monitoring](http://rileylab.bio.umb.edu/sites/g/files/g1314676/f/201502/Golub1999Molecular.pdf)
     - [Classification and diagnostic prediction of cancers using gene expression profiling and artificial neural networks](http://www.nature.com/nm/journal/v7/n6/pdf/nm0601_673.pdf)
     - [Comprehensive genomic characterization defines human glioblastoma genes and core pathways](http://www.nature.com/nature/journal/v455/n7216/full/nature07385.html)
