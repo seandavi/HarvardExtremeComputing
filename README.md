@@ -55,6 +55,10 @@ to describe relationships between gene expression, gene copy number, and
 DNA methylation. The goal of this lab is to access and prepare our data prior
 to applying large-scale, embarrasingly parallel computation.
 
+- [Regulome Explorer](http://explorer.cancerregulome.org/all_pairs/)
+- [Youtube video describing project](https://youtu.be/tPtJd6AzU8c?t=40m24s)
+- [Behind the Compute Engine demo at Google I/O 2012 Keynote](https://cloud.google.com/compute/io)
+
 ## Lecture 4
 
 In this lecture, we will discuss [the RF-ACE algorithm](https://code.google.com/p/rf-ace/) and 
@@ -65,7 +69,7 @@ show example data output from applying this approach to our TCGA GBM data.
 In this lab, we will be setting up and running the large-scale RF-ACE analysis. At this point,
 students 
 
-### Reading materials
+### Background materials
 
 - Public resources
     - [The Cancer Genome Atlas (TCGA) project](http://cancergenome.nih.gov/)
