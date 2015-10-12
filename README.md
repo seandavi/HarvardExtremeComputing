@@ -5,25 +5,36 @@ Materials for the Fall 2015 Harvard Extreme Computing course.
 ## Lecture 1
 
 This lecture will serve as a basic review of the 
-core concepts of normal biology and also to introduce
-students to technologies that allow researchers to probe
-the genome to better understand normal and human biology.
+core concepts of normal biology with a focus on the
+current state of the understanding of the human
+genome.
 
 [Slides will be here soon]
 
 ## Lab 1
 
-In this lab, the idea is to get familiar with the 
-[R statistical programming environment](http://www.r-project.org). To get
-started:
+This lab will be run by the Research Computing group at Harvard and will cover:
+
+1. Introduction to the R programming language
+2. Accessing and using the Odyssey High Performance Computing (HPC) cluster
+
+### Resources of interest
+
+- [R statistical programming environment](http://www.r-project.org).
+- [Introduction to Harvard's Odyssey cluster](https://rc.fas.harvard.edu/training/intro-to-odyssey/)
+
+I have created some introductory materials here that you may use (not required) 
+to augment what you do during the lab. The "lecture slides" are meant to be used "interactively" and
+additional material is useful to get a sense of some of the basic capabilities of R.
+
+- [Introduction to R](http://watson.nci.nih.gov/~sdavis/tutorials/IntroToR/)
+
+### Getting started with R
 
 1. Install the [R software](https://cran.r-project.org/).
 2. Consider installing [RStudio](https://www.rstudio.com/products/rstudio/download/) as a convenient environment for accessing R
 
-I have created some introductor materials here. The "lecture slides" are meant to be used "interactively" and
-additional material is useful to get a sense of some of the basic capabilities of R.
 
-- [Introduction to R](http://watson.nci.nih.gov/~sdavis/tutorials/IntroToR/)
 
 
 ## Lecture 2
@@ -64,10 +75,6 @@ to applying large-scale, embarrasingly parallel computation.
 In this lecture, we will discuss [the RF-ACE algorithm](https://code.google.com/p/rf-ace/) and 
 show example data output from applying this approach to our TCGA GBM data.
 
-## Lab 4
-
-In this lab, we will be setting up and running the large-scale RF-ACE analysis. At this point,
-students 
 
 ## Background materials
 
@@ -84,6 +91,7 @@ students
     - [The UCSC Genome Browser](http://genome.ucsc.edu)
     - [BioStars](https://biostars.org)
     - [Bioconductor](http://bioconductor.org)
+
 - Genomic assays
     - [DNA microarrays]()
     - [Illumina sequencing overview (pdf)](https://www.illumina.com/documents/products/techspotlights/techspotlight_sequencing.pdf)
@@ -98,3 +106,4 @@ students
 ### Computation and machine learning
 
 - [CloudForest](https://github.com/ryanbressler/CloudForest)
+- FastQTL [manuscript](http://biorxiv.org/content/early/2015/08/07/022301) and [software](http://fastqtl.sourceforge.net)
