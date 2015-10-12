@@ -1,5 +1,8 @@
 # HarvardExtremeComputing
 
+- [Sean Davis](http://watson.nci.nih.gov/~sdavis/), [@seandavis12](https://twitter.com/seandavis12)
+- Eric Stahlberg
+
 Materials for the Fall 2015 Harvard Extreme Computing course.
 
 ## Lecture 1
@@ -47,33 +50,27 @@ biological data analysis.
 
 ## Lab 2
 
-In this lab, we will work with [the Bioconductor project](http://bioconductor.org) as
-an environment for biological data analysis. We will introduce some useful data containers
-and look at our first cancer biology dataset involving gene copy number.
+In this lab, we will introduce a particularly important biological application, 
+gene expression quantification and analysis.  I will introduce the technology, some
+details about the data formats and primary data analysis.
+
+Then, we will work with [the Bioconductor project](http://bioconductor.org) as
+an environment for biological data analysis. Finally, I will introduce a tutorial RNA-seq
+dataset that you will work through on your own.
 
 ## Lecture 3
 
-In this lecture, we will focus on a particularly important biological
-application, RNA gene expression analysis.  We will work interactively
-to analyze an RNA-seq dataset and you can continue to work on this
-on your own.
+This will be a combined lecture/lab.  I will introduce the "final project" in which 
+you will partially reproduce the results of a recent paper published in Nature. 
 
 ## Lab 3
 
-In this lab, we will introduce our "final project". We will be using data from 
-the TCGA glioblastoma multiforme (GBM) project and some basic machine learning
-to describe relationships between gene expression, gene copy number, and 
-DNA methylation. The goal of this lab is to access and prepare our data prior
-to applying large-scale, embarrasingly parallel computation.
-
-- [Regulome Explorer](http://explorer.cancerregulome.org/all_pairs/)
-- [Youtube video describing project](https://youtu.be/tPtJd6AzU8c?t=40m24s)
-- [Behind the Compute Engine demo at Google I/O 2012 Keynote](https://cloud.google.com/compute/io)
+In this lab, we will finish up the actual "compute" of the final project and begin
+to interpret and visualize the results of our computation.  
 
 ## Lecture 4
 
-In this lecture, we will discuss [the RF-ACE algorithm](https://code.google.com/p/rf-ace/) and 
-show example data output from applying this approach to our TCGA GBM data.
+TBD....
 
 
 ## Background materials
@@ -107,3 +104,4 @@ show example data output from applying this approach to our TCGA GBM data.
 
 - [CloudForest](https://github.com/ryanbressler/CloudForest)
 - FastQTL [manuscript](http://biorxiv.org/content/early/2015/08/07/022301) and [software](http://fastqtl.sourceforge.net)
+- [Bioconductor](https://bioconductor.org/)
