@@ -51,17 +51,24 @@ biological data analysis.
 ## Lab 2
 
 In this lab, we will introduce a particularly important biological application, 
-gene expression quantification and analysis.  I will introduce the technology, some
-details about the data formats and primary data analysis.
+gene expression quantification and analysis. One aspect of the final project will 
+include RNA-seq data, so I will introduce the technology, some
+details about the data formats and primary data analysis. 
 
 Then, we will work with [the Bioconductor project](http://bioconductor.org) as
 an environment for biological data analysis. Finally, I will introduce a tutorial RNA-seq
-dataset that you will work through on your own.
+dataset that you will work through on your own (homework).  *Note that you DO NOT need to complete
+this homework in its entirety*. 
+
+- See the [RNA-seq exercises section](http://watson.nci.nih.gov/~sdavis/tutorials/IntroToR/).
 
 ## Lecture 3
 
-This will be a combined lecture/lab.  I will introduce the "final project" in which 
-you will partially reproduce the results of a recent paper published in Nature. 
+This will be a combined lecture/lab.  Topics covered include:
+
+- Basics of parallel computing (1 hour)
+- Introduction to final project (45 minutes)
+- Begin work on final project (lab portion)
 
 ## Lab 3
 
@@ -70,8 +77,9 @@ to interpret and visualize the results of our computation.
 
 ## Lecture 4
 
-TBD....
-
+- Wrapup of final project, including unanswered and open questions
+- Additional topics in Extreme Biocomputing
+- Parting questions, comments
 
 ## Background materials
 
