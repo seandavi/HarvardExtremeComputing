@@ -1,9 +1,12 @@
 # HarvardExtremeComputing
 
+Materials for the Fall 2015 Harvard Extreme Computing course.
+
 - [Sean Davis](http://watson.nci.nih.gov/~sdavis/), [@seandavis12](https://twitter.com/seandavis12)
 - Eric Stahlberg
 
-Materials for the Fall 2015 Harvard Extreme Computing course.
+Course email list (approval, but just ask): https://groups.google.com/forum/#!forum/harvardextremecomputing2015
+
 
 ## Lecture 1
 
