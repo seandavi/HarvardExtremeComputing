@@ -16,6 +16,7 @@ current state of the understanding of the human
 genome.
 
 - [Slides](http://1.usa.gov/1RHVnEf)
+- [Live Stream](http://webmeeting.nih.gov/bioifx/)
 - [UCSC Exercises](http://www.hsl.unc.edu/collections/Bioinformatics/ClassMaterials/UCSC_exercises_V14a_unc.pdf)
 
 ## Lab 1
