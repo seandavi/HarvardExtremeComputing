@@ -15,8 +15,7 @@ core concepts of normal biology with a focus on the
 current state of the understanding of the human
 genome.
 
-[Slides will be here soon]
-
+- [Slides](http://1.usa.gov/1RHVnEf)
 - [UCSC Exercises](http://www.hsl.unc.edu/collections/Bioinformatics/ClassMaterials/UCSC_exercises_V14a_unc.pdf)
 
 ## Lab 1
