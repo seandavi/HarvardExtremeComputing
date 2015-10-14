@@ -14,6 +14,8 @@ genome.
 
 [Slides will be here soon]
 
+- [UCSC Exercises](http://www.hsl.unc.edu/collections/Bioinformatics/ClassMaterials/UCSC_exercises_V14a_unc.pdf)
+
 ## Lab 1
 
 This lab will be run by the Research Computing group at Harvard and will cover:
