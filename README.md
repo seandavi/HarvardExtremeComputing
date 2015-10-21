@@ -30,6 +30,7 @@ This lab will be run by the Research Computing group at Harvard and will cover:
 
 - [R statistical programming environment](http://www.r-project.org).
 - [Introduction to Harvard's Odyssey cluster](https://rc.fas.harvard.edu/training/intro-to-odyssey/)
+- [Odyssey module list](https://rc.fas.harvard.edu/resources/module-list/)
 
 I have created some introductory materials here that you may use (not required) 
 to augment what you do during the lab. The "lecture slides" are meant to be used "interactively" and
@@ -52,6 +53,9 @@ to delve more deeply into technologies that allow us to
 examine normal and disease biology at a molecular level. We will
 also begin to discuss data analysis approaches to high-throughput
 biological data analysis.
+
+- [Slides](http://1.usa.gov/1GRMzoY)
+- [Class exercises](http://watson.nci.nih.gov/~sdavis/tutorials/IntroToR/)
 
 ## Lab 2
 
