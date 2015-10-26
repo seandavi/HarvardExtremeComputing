@@ -1,10 +1,23 @@
 # Alignment on odyssey
 
+## setup
+
+You should set up your own directory for capturing results.
+
+```bash
+cd /n/regal/ac290r/
+mkdir $USER
+cd $USER
+```
+
 ## Interactive
 
 ```bash
 # Start an interactive job with 8 cores (parallelization) and 8GB of RAM for 6 hours
 srun -p interact --pty -c 8 --mem 8000 -t 0-6:00 bash
+
+# switch to your own directory
+cd /n/regal/ac290r/$USER
 
 # load up modules
 source new-modules.sh
