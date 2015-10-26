@@ -42,3 +42,9 @@ samtools index TEST.sorted.bam
 rm NCI-H460.sam
 rm NCI-H460.bam
 ```
+
+## Batch
+
+Now, create a slurm batch script for aligning all the "pairs" of files in the `tmp` directory. The goal is to produce
+sorted `.bam` files for each of the 61 samples.
+
