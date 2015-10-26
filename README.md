@@ -59,30 +59,27 @@ biological data analysis.
 
 ## Lab 2
 
-In this lab, we will introduce a particularly important biological application, 
-gene expression quantification and analysis. One aspect of the final project will 
-include RNA-seq data, so I will introduce the technology, some
-details about the data formats and primary data analysis. 
+### Section 1
 
-Then, we will work with [the Bioconductor project](http://bioconductor.org) as
-an environment for biological data analysis. Finally, I will introduce a tutorial RNA-seq
-dataset that you will work through on your own (homework).  *Note that you DO NOT need to complete
-this homework in its entirety*. 
+- Gene expression microarray data exercise
+- [Class exercises](http://watson.nci.nih.gov/~sdavis/tutorials/IntroToR/)
 
-- See the [RNA-seq exercises section](http://watson.nci.nih.gov/~sdavis/tutorials/IntroToR/).
+### Section 2
+
+- Begin working on DNA alignment project, based on [this paper](http://cancerres.aacrjournals.org/content/73/14/4372.full).
+- [Starter materials](alignment.md)
 
 ## Lecture 3
 
 This will be a combined lecture/lab.  Topics covered include:
 
 - Basics of parallel computing (1 hour)
-- Introduction to final project (45 minutes)
-- Begin work on final project (lab portion)
+- Work on parallelizing and running full alignment dataset
 
 ## Lab 3
 
-In this lab, we will finish up the actual "compute" of the final project and begin
-to interpret and visualize the results of our computation.  
+- Introduction to variant calling
+- Perform variant calling and interpretation
 
 ## Lecture 4
 
