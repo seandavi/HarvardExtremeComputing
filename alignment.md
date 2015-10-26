@@ -25,7 +25,7 @@ module load bwa
 module load samtools
 
 # do the actual alignment
-bwa mem -t 4 /n/regal/informatics_public/ref/igenome/Homo_sapiens/UCSC/hg19/Sequence/BWAIndex/genome \
+bwa mem -t 4 /n/regal/informatics_public/ref/igenome/Homo_sapiens/UCSC/hg19/Sequence/BWAIndex/genome.fa \
   /n/regal/ac290r/tmp/SHORT_TEST_R1.fq.gz \
   /n/regal/ac290r/fastq/SHORT_TEST_R2.fq.gz > TEST.sam
 
