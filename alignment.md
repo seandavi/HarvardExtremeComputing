@@ -13,17 +13,17 @@ module load samtools
 
 # do the actual alignment
 bwa mem -t 4 /n/regal/informatics_public/ref/igenome/Homo_sapiens/UCSC/hg19/Sequence/BWAIndex/genome \
-  /n/regal/ac290r/fastq/NCI-H460_R1.fq.gz \
-  /n/regal/ac290r/fastq/NCI-H460_R2.fq.gz > NCI-H460.sam
+  /n/regal/ac290r/tmp/SHORT_TEST_R1.fq.gz \
+  /n/regal/ac290r/fastq/SHORT_TEST_R2.fq.gz > TEST.sam
 
 # convert from text-based SAM format to binary (and compressed) BAM format
-samtools view -bS NCI-H460.sam > NCI-H460.bam
+samtools view -bS TEST.sam > TEST.bam
 
 #sort into chromosome order
-samtools sort NCI-H460.bam NCI-H460.sorted
+samtools sort TEST.bam TEST.sorted
 
 # and index the bam file
-samtools index NCI-H460.sorted.bam
+samtools index TEST.sorted.bam
 
 #cleanup 
 rm NCI-H460.sam
