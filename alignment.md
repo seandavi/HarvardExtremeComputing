@@ -27,7 +27,7 @@ module load samtools
 # do the actual alignment using 8 cores (threads)
 bwa mem -t 8 /n/regal/informatics_public/ref/igenome/Homo_sapiens/UCSC/hg19/Sequence/BWAIndex/genome.fa \
   /n/regal/ac290r/tmp/SHORT_TEST_R1.fq.gz \
-  /n/regal/ac290r/fastq/SHORT_TEST_R2.fq.gz > TEST.sam
+  /n/regal/ac290r/tmp/SHORT_TEST_R2.fq.gz > TEST.sam
 
 # convert from text-based SAM format to binary (and compressed) BAM format
 samtools view -bS TEST.sam > TEST.bam
