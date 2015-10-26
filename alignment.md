@@ -39,8 +39,8 @@ samtools sort TEST.bam TEST.sorted
 samtools index TEST.sorted.bam
 
 #cleanup 
-rm NCI-H460.sam
-rm NCI-H460.bam
+rm TEST.sam
+rm TEST.bam
 ```
 
 ## Batch
