@@ -116,6 +116,5 @@ This will be a combined lecture/lab.  Topics covered include:
 
 ### Computation and machine learning
 
-- [CloudForest](https://github.com/ryanbressler/CloudForest)
-- FastQTL [manuscript](http://biorxiv.org/content/early/2015/08/07/022301) and [software](http://fastqtl.sourceforge.net)
+- [bwa aligner manuscript](http://www.ncbi.nlm.nih.gov/pubmed/19451168)
 - [Bioconductor](https://bioconductor.org/)
