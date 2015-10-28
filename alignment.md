@@ -48,3 +48,13 @@ rm TEST.bam
 Now, create a slurm batch script for aligning all the "pairs" of files in the `tmp` directory. The goal is to produce
 sorted `.bam` files for each of the 61 samples.
 
+## Variant calling
+
+After you have generated all the sorted, indexed BAM files, it is time to call variants. Find the help for the `samtools` package (online) and perform basic variant calling across ALL the samples. 
+
+## Bonus
+
+A lot of computational problems involve stepwise processing of data where tasks rely on previous tasks; they form a directed acyclic graph. Consider converting these couple of steps into a workflow that can be run reproducibly and in parallel while. See here for some ideas of frameworks that help with this problem.
+
+https://www.biostars.org/p/115745/
+
