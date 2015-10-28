@@ -75,11 +75,13 @@ This will be a combined lecture/lab.  Topics covered include:
 
 - Basics of parallel computing (1 hour)
 - Work on parallelizing and running full alignment dataset
+- Develop template for bam --> vcf (variant calling)
 
 ## Lab 3
 
-- Introduction to variant calling
 - Perform variant calling and interpretation
+- Somatic mutational spectra example
+- Drug sensitivity example
 
 ## Lecture 4
 
