@@ -1,0 +1,113 @@
+---
+title: "NCI-60 Drug Sensitivity Prediction"
+author: "Sean Davis"
+date: "November 1, 2015"
+output: html_document
+---
+
+# Background
+
+The NCI-60 cell lines are the most frequently studied human tumor cell lines in cancer research. This panel has generated the most extensive cancer pharmacology database worldwide. In addition, these cell lines have been intensely investigated, providing a unique platform for hypothesis-driven research focused on enhancing our understanding of tumor biology. Here, we report a comprehensive analysis of coding variants in the NCI-60 panel of cell lines identified by whole exome sequencing, providing a list of possible cancer specific variants for the community. Furthermore, we identify pharmacogenomic correlations between compounds and associated drug screen data.
+
+- [NCI-60 Exomes paper](http://www.ncbi.nlm.nih.gov/pubmed/23856246)
+
+# The Data
+
+## Genetic variation
+
+The variants have been subjected to a set of filters to:
+
+1. Remove variants common in human populations to increase the chances of focusing on cancer-associated mutations
+2. Keep variants that cause a protein-coding change in a gene
+3. Collapsed to the level of a gene, resulting in a table of Gene X Sample with each cell in the table being `TRUE` or `FALSE`
+
+## Drug screen data
+
+Each cell line has been treated with MANY different compounds and the growth of the cells
+monitored. The concentration of each compound is titrated so that one can observe a growth response curve. The concentration of a given compound that results in 50% of the 
+maximal reduction in cell growth. This concentration, the 50% Growth Inhibition concentration, or GI50, is a measure of the effective of a given compound on a given
+cell line. Note that this is a "relative" measurement.
+
+All screened compound data can be downloaded from https://wiki.nci.nih.gov/display/NCIDTPdata/NCI-60+Growth+Inhibition+Data.
+The GI50 Data (Sept 2014) release contains a file CANCER60GI50.csv.
+We used this file to extract a few compounds of interest for prediction models.
+
+# The experiment
+
+- *Objective*: _Use the variants, after filtering, to predict drug GI50._
+
+## Load the data
+
+We have processed the data down to Gene X Sample after removing common variants. These data are directly available at the Github site, so we can read them into R.
+
+```{r}
+# We can grab the data directly from github.
+tmp <- read.csv("https://raw.githubusercontent.com/seandavi/NCI60_SuperLearner/master/Data/VariantTableByGene.csv")
+VariantTable = as.matrix(tmp[,-1])
+rownames(VariantTable) = tmp[,1]
+```
+
+```{r}
+## Load drug/agent GI50 data
+DrugDat <- read.csv("https://raw.githubusercontent.com/seandavi/NCI60_SuperLearner/master/Data/AOD_IOA_GI50.csv")
+```
+
+```{r}
+# find overlap in cell lines
+setdiff(rownames(VariantTable), unique(DrugDat$CELL))
+setdiff(unique(DrugDat$CELL), rownames(VariantTable))
+
+# fix names in exome data (to match the names in the drug data)
+rownames(VariantTable) <- sub("A549_ATCC", "A549/ATCC", rownames(VariantTable))
+rownames(VariantTable) <- sub("COLO-205", "COLO 205", rownames(VariantTable))
+rownames(VariantTable) <- sub("DU145", "DU-145", rownames(VariantTable))
+rownames(VariantTable) <- sub("HCC2998", "HCC-2998", rownames(VariantTable))
+rownames(VariantTable) <- sub("HL-60", "HL-60(TB)", rownames(VariantTable))
+rownames(VariantTable) <- sub("Hs_578T", "HS 578T", rownames(VariantTable))
+rownames(VariantTable) <- sub("IGR-OV1", "IGROV1", rownames(VariantTable))
+rownames(VariantTable) <- sub("K562", "K-562", rownames(VariantTable))
+rownames(VariantTable) <- sub("LOX_IMVI", "LOX IMVI", rownames(VariantTable))
+rownames(VariantTable) <- sub("MDA-MB-231", "MDA-MB-231/ATCC", rownames(VariantTable))
+rownames(VariantTable) <- sub("NCI-ADR-RES", "NCI/ADR-RES", rownames(VariantTable))
+rownames(VariantTable) <- sub("RXF-393", "RXF 393", rownames(VariantTable))
+
+# restrict drug data to overlap with exome data
+DrugDat <- DrugDat[which(DrugDat$CELL %in% rownames(VariantTable)), ]
+
+# Change our drug data into a more usable format
+GI50Wide <- reshape(DrugDat[, c("NSC", "CELL", "NLOGGI50")], direction = "wide", timevar = "NSC", idvar = "CELL")
+colnames(GI50Wide) <- sub("NLOGGI50.", "NSC", colnames(GI50Wide))
+
+# use cell line name as rowname
+rownames(GI50Wide) <- GI50Wide[, 1]
+# remove cell line name, and line up cell lines with Variant Table
+GI50Wide <- GI50Wide[rownames(VariantTable), -1]
+all.equal(rownames(VariantTable), rownames(GI50Wide))
+
+## filter VariantTable -- why?
+CountVar <- colSums(VariantTable)
+VariantTable_sub <- as.data.frame(VariantTable[, CountVar > 4])
+
+## clean variable names in variant table
+colnames(VariantTable_sub) <- make.names(colnames(VariantTable_sub)) # some genes have "-" in the name, but this creates problems for regression models/formulas, replace with "."
+```
+
+```{r}
+rfPredict = function(i) {
+  require(randomForest)
+  idx = !is.na(GI50Wide[,i])
+  rf  = randomForest(x = VariantTable_sub[idx, ], y = GI50Wide[idx, i])
+  return(rf)
+}
+```
+
+We can run the randomForest model in parallel using all the cores on our machines. 
+
+```{r}
+library(BiocParallel)
+register(MulticoreParam())
+res5 = bplapply(seq_along(GI50Wide),predictor)
+```
+
+```{r}
+varExplained = sapply(res,function(x) {return(x$rsq[length(x$rsq)])})
