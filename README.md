@@ -85,7 +85,7 @@ This will be a combined lecture/lab.  Topics covered include:
     - http://watson.nci.nih.gov/projects/nci60/wes/VCF/SK-MEL-2.vcf
     - http://watson.nci.nih.gov/projects/nci60/wes/BAMS/SK-MEL-2_reord_mdups_ralgn_fmate_recal.bam
 - Quick machine learning in R exercises [[html]](http://rpubs.com/seandavi/MLBasics)[[R markdown]](MachineLearning.Rmd)
-- [Drug sensitivity example](DrugResponseExample.Rmd)
+- [Drug sensitivity example](DrugResponsePrediction.Rmd)
 
 ## Lecture 4
 
