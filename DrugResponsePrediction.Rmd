@@ -106,8 +106,29 @@ We can run the randomForest model in parallel using all the cores on our machine
 ```{r}
 library(BiocParallel)
 register(MulticoreParam())
-res5 = bplapply(seq_along(GI50Wide),predictor)
+res = bplapply(seq_along(GI50Wide),rfPredict)
 ```
 
+Let's use the amount of variation explained as a measure of "goodness" of fit.
+
 ```{r}
-varExplained = sapply(res,function(x) {return(x$rsq[length(x$rsq)])})
+varExplained = sapply(res,function(x) {return(abs(x$rsq[length(x$rsq)]))})
+hist(varExplained)
+# and find 
+which(varExplained>0.7)
+```
+
+We can look at the variables most important to the prediction and see if they have any meaning in a biological context.
+
+```{r}
+require(randomForest)
+# what is the compound name?
+colnames(GI50Wide)[3]
+# Which gene is most important in the prediction?
+varImpPlot(res[[3]])
+```
+
+And let Google tell us if there is a relationship:
+
+- [Search for Allopurinol and IL4R](https://www.google.com/webhp?sourceid=chrome-instant&ion=1&espv=2&es_th=1&ie=UTF-8#q=allopurinol+il4r)
+
