@@ -80,9 +80,11 @@ This will be a combined lecture/lab.  Topics covered include:
 ## Lab 3
 
 - Perform/review variant calling
-- Visualize results in IGV
-   - http://watson.nci.nih.gov/projects/nci60/wes/VCF/SK-MEL-2.vcf
-   - http://watson.nci.nih.gov/projects/nci60/wes/BAMS/SK-MEL-2_reord_mdups_ralgn_fmate_recal.bam
+    - See file [samtools.slurm](samtools.slurm) also located in the sdavis2 ac290r directory
+- Visualize results in [IGV](http://www.broadinstitute.org/software/igv)
+    - http://watson.nci.nih.gov/projects/nci60/wes/VCF/SK-MEL-2.vcf
+    - http://watson.nci.nih.gov/projects/nci60/wes/BAMS/SK-MEL-2_reord_mdups_ralgn_fmate_recal.bam
+- Quick machine learning in R exercises [[html]](http://rpubs.com/seandavi/MLBasics)[[R markdown]](MachineLearning.Rmd)
 - [Drug sensitivity example](DrugResponseExample.Rmd)
 
 ## Lecture 4
