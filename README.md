@@ -83,7 +83,7 @@ This will be a combined lecture/lab.  Topics covered include:
 - Visualize results in IGV
    - http://watson.nci.nih.gov/projects/nci60/wes/VCF/SK-MEL-2.vcf
    - http://watson.nci.nih.gov/projects/nci60/wes/BAMS/SK-MEL-2_reord_mdups_ralgn_fmate_recal.bam
-- [Drug sensitivity example](DrugResponseExample.Rmd)
+- [Drug sensitivity prediction](DrugResponsePrediction.Rmd)
 
 ## Lecture 4
 
