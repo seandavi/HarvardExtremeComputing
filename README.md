@@ -79,9 +79,11 @@ This will be a combined lecture/lab.  Topics covered include:
 
 ## Lab 3
 
-- Perform variant calling and interpretation
-- Somatic mutational spectra example
-- Drug sensitivity example
+- Perform/review variant calling
+- Visualize results in IGV
+   - http://watson.nci.nih.gov/projects/nci60/wes/VCF/SK-MEL-2.vcf
+   - http://watson.nci.nih.gov/projects/nci60/wes/BAMS/SK-MEL-2_reord_mdups_ralgn_fmate_recal.bam
+- [Drug sensitivity example](DrugResponseExample.Rmd)
 
 ## Lecture 4
 
