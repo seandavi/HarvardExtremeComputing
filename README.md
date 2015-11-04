@@ -7,6 +7,11 @@ Materials for the Fall 2015 Harvard Extreme Computing course.
 
 Course email list (approval, but just ask): https://groups.google.com/forum/#!forum/harvardextremecomputing2015
 
+# Final Project
+
+1. Describe and attempt to run two additional machine learning techniques on the NCI-60 drug sensitivity data.  Why did you choose the techniques you did?  Were the results interpretable and, if so, how? (1/2 page +)
+2. Describe at least three levels of complexity in information flow from the "beginning" to the "end" of the Central Dogma. (1/2 page)
+3. Pick any topic from final lecture to investigate in more detail.  Describe the computational complexities that you think might arise in your topic of choice. (1 page)
 
 ## Lecture 1
 
@@ -92,6 +97,7 @@ This will be a combined lecture/lab.  Topics covered include:
 - Wrapup of final project, including unanswered and open questions
 - Additional topics in Extreme Biocomputing
 - Parting questions, comments
+ 
 
 ## Background materials
 
