@@ -82,6 +82,8 @@ This will be a combined lecture/lab.  Topics covered include:
 - Work on parallelizing and running full alignment dataset
 - Develop template for bam --> vcf (variant calling)
 
+- [slides from talk](http://watson.nci.nih.gov/~sdavis/talks/2015_10_28/ViewsOfGenome.HECBIO.20151021.pdf)
+
 ## Lab 3
 
 - Perform/review variant calling
@@ -97,7 +99,8 @@ This will be a combined lecture/lab.  Topics covered include:
 - Wrapup of final project, including unanswered and open questions
 - Additional topics in Extreme Biocomputing
 - Parting questions, comments
- 
+
+- [slides from talk](http://watson.nci.nih.gov/~sdavis/talks/2015_11_04/datasci.pdf)
 
 ## Background materials
 
